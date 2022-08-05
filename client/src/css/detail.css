@@ -1,0 +1,198 @@
+
+
+
+
+.card-detail{
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #ffcc01;
+    text-shadow: 8px 0 #2c62aa, 2px 0 #2c62aa, 0 4px #2c62aa, 0 -2px #2c62aa,
+               3px 1px #2c62aa, -1px -1px #2c62aa, 3px -1px #2c62aa, -1px 1px #2c62aa;
+    background-image: url('./images/pokepoke.jpg');
+    border-radius: 80px;
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 35px 65px rgba(6, 34, 70, 0.6);
+    overflow: hidden;
+}
+
+
+.card-detail .img-detail{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.h3-name-detail{
+    background-color: rgba(255, 204, 1, 0.9);
+    position: absolute;
+    bottom: 385px;
+    right: -65%;
+    padding: 10px 5px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 600;
+    transform: skew(-5deg);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.h5-id-detail{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    width: 80%;
+    padding: 12px 5px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    position: absolute;
+    right: -85%;
+    bottom: 435px;
+    transform: skew(-5deg);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.h3-life-detail{
+    background-color: rgba(187, 233, 36, 0.9);
+    position: absolute;
+    bottom: 355px;
+    right: -65%;
+    padding: 10px 5px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    transform: skew(-5deg);
+    transition: 0.3s;
+    text-shadow: 0 0 4px black;
+    border-radius: 5px;
+}
+
+.h3-attack-detail{
+    background-color: rgba(233, 59, 36, 0.9);
+    position: absolute;
+    bottom: 320px;
+    right: -65%;
+    padding: 10px 5px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    transform: skew(-5deg);
+    transition: 0.3s;
+    text-shadow: 0 0 4px black;
+    border-radius: 5px;
+}
+
+.h3-deffense-detail{
+    background-color: rgba(5, 166, 73, 0.9);
+    position: absolute;
+    bottom: 285px;
+    right: -65%;
+    padding: 10px 5px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    transform: skew(-5deg);
+    transition: 0.3s;
+    text-shadow: 0 0 4px black;
+    border-radius: 5px;
+}
+
+
+.h3-velocity-detail{
+    background-color: rgba(174, 224, 245, 0.9);
+    position: absolute;
+    bottom: 250px;
+    right: -65%;
+    padding: 10px 5px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    transform: skew(-5deg);
+    transition: 0.3s;
+    text-shadow: 0 0 4px black;
+    border-radius: 5px;
+}
+
+.h3-height-detail{
+    background-color: rgba(245, 223, 101, 0.9);
+    position: absolute;
+    bottom: 215px;
+    right: -65%;
+    padding: 10px 5px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    transform: skew(-5deg);
+    transition: 0.3s;
+    text-shadow: 0 0 4px black;
+    border-radius: 5px;
+}
+
+.h3-weight-detail{
+    background-color: rgba(245, 148, 93, 0.9);
+    position: absolute;
+    bottom: 180px;
+    right: -65%;
+    padding: 10px 5px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    transform: skew(-5deg);
+    transition: 0.3s;
+    text-shadow: 0 0 4px black;
+    border-radius: 5px;
+}
+
+.h3-type-detail{
+    background-color: rgba(43, 110, 183, 0.9);
+    position: absolute;
+    bottom: 100px;
+    right: -65%;
+    padding: 10px 5px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    transform: skew(-5deg);
+    transition: 0.3s;
+    text-shadow: 0 0 4px black;
+    border-radius: 5px;
+}
+
+
+.card-detail:hover .h3-name-detail,
+.card-detail:hover .h5-id-detail,
+.card-detail:hover .h3-life-detail,
+.card-detail:hover .h3-attack-detail,
+.card-detail:hover .h3-height-detail,
+.card-detail:hover .h3-weight-detail,
+.card-detail:hover .h3-type-detail,
+.card-detail:hover .h3-deffense-detail,
+.card-detail:hover .h3-velocity-detail{
+   right: 10% 
+}
+
+
+.card-detail:hover .img-detail{
+    transform: scale(1.15);
+    filter: brightness(40%);
+}

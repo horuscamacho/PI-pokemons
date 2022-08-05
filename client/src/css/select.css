@@ -1,0 +1,24 @@
+
+
+.selected{
+    padding: 8px 12px;
+    color: #fccc04;
+    background-color: #075c9e;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.selected:focus,
+.selected:hover {
+    outline: none;
+    border: 1px solid #bbbb;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.selected option {
+    background: #fccc04;
+    
+}

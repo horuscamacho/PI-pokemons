@@ -1,0 +1,20 @@
+.first{
+    border: 1px solid rgb(208, 198, 198);
+    padding: 5px;
+    background-color: #f1c304;
+}
+
+.aas{
+    text-decoration: none;
+    background-color: #f1c304;
+    padding: 4px;
+    color: #152a5e;
+    
+}
+
+.aas:hover{
+    background-color: #152a5e;
+    color:#f1c304;
+    border: solid black .2px;
+    cursor: pointer;
+}

@@ -1,0 +1,235 @@
+.maestroPokemon{
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 40px;
+    color: #ffcc01;
+    text-shadow: 8px 0 #2c62aa, 2px 0 #2c62aa, 0 4px #2c62aa, 0 -2px #2c62aa,
+               3px 1px #2c62aa, -1px -1px #2c62aa, 3px -1px #2c62aa, -1px 1px #2c62aa;
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+
+
+
+.general {
+    background-image: url('./images/homeSetNombre.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.dark {
+    background-image: url('./images/dark.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.flying {
+    background-image: url('./images/flying.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.poison {
+    background-image: url('./images/poison.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+
+.ground {
+    background-image: url('./images/ground.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.ghost {
+    background-image: url('./images/ghost.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.fairy {
+    background-image: url('./images/fairy.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.electric {
+    background-image: url('./images/electric.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.normal {
+    background-image: url('./images/normal.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.dragon {
+    background-image: url('./images/dragon.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.psychic {
+    background-image: url('./images/psychic.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.water {
+    background-image: url('./images/water.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.bug {
+    background-image: url('./images/bug.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+
+
+
+.grass {
+    background-image: url('./images/grass.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+
+.ice {
+    background-image: url('./images/ice.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+
+
+.unknown {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+
+.shadow {
+    background-image: url('./images/shadow.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+
+.dark{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+
+
+.landing {
+    background-image: url('./images/Landing.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+
+
+.input-cont{
+    width: 450px;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 0 10px white;
+}
+
+.iinput{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+.iinput .iinput2{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(21,42,94);
+    font-size: 18px;
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+.iinput .labelinput{
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    color: #2c62aa;
+    text-shadow: 8px 0 #ffcc01, 2px 0 #ffcc01, 0 4px #ffcc01, 0 -2px #ffcc01,
+    3px 1px #ffcc01, -1px -1px #ffcc01, 3px -1px #ffcc01, -1px 1px #ffcc01;
+    font-size: 18px;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    
+}
+
+.iinput .iinput2:focus ~ .labelinput,
+.iinput .iinput2:valid ~ .labelinput{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #ffcc01;
+    text-shadow: 8px 0 #2c62aa, 2px 0 #2c62aa, 0 4px #2c62aa, 0 -2px #2c62aa,
+    3px 1px #2c62aa, -1px -1px #2c62aa, 3px -1px #2c62aa, -1px 1px #2c62aa;
+}
+
+.iinput .iinput2:focus,
+.iinput .iinput2:valid{
+    border-color: #ffcc01;
+}
+
+
+
+.formNombre{
+    display: flex;
+    justify-content: center;
+}

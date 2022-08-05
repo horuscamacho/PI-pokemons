@@ -1,0 +1,52 @@
+.steel {
+    background-image: url('./images/steel.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.fighting {
+    background-image: url('./images/fighting.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+.fire {
+    background-image: url('./images/pokemonFuego.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+
+.rock {
+    background-image: url('./images/rock.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+
+.detail-page{ 
+    background-image: url('./images/pokedex.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+    
+}
+
+
+.create-pokemon{ 
+    background-image: url('./images/pikachu.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+
+}
