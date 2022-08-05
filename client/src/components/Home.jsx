@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from "react-router-dom";
-import { getPokemons, getTypes, getUser, orderByName, filterPokemonsByType, filterCreated } from "../actions";
+import { getPokemons, getTypes, orderByName, filterPokemonsByType, filterCreated, resetFilters } from "../actions";
 import Card from "./Card";
 import Paginado from "./Paginado";
 import '../css/card.css'
@@ -34,6 +34,7 @@ export default function Home() {
         dispatch(getPokemons())
         dispatch(getTypes())
         changingBackground("general")
+        return () => dispatch(getPokemons())
     }, [dispatch])
 
    
@@ -66,6 +67,10 @@ export default function Home() {
         
     }
 
+    function retFilters(){
+        dispatch(resetFilters())
+        setCurrentPage(1)
+    }
     
 
         return (
@@ -79,12 +84,12 @@ export default function Home() {
                     <SearchBar setCurrentPage={setCurrentPage}/>
                 </div>
                 <div >
-                    <button onClick={() => window.location.reload()} className="booton">Reestablecer todos los filtros</button>
+                    <button onClick={() => retFilters()} className="booton">Reestablecer todos los filtros</button>
                 </div>
                 <Filtros filtros = {{handleSort, handleFilteredByType, handleFilteredByCreated}}/>
                 {
                     currentPokemons?.map((p) => {
-                        console.log(p.type)
+                        
                         return (
                             <div key={p.id} className="bckgrndImg">
                                 <Link to={"/pokemons/" + p.id}  >

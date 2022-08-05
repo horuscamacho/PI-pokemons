@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { getNamePokemon } from '../actions'
+import { getNamePokemon, searchLive } from '../actions'
 import '../css/searchBar.css'
 
 
@@ -16,16 +16,18 @@ const SearchBar = ({setCurrentPage}) => {
         if(e.target.value.length === 0){
             document.body.className = "general"
         }
+        dispatch(searchLive(e.target.value))
+        setCurrentPage(1)
        
     }
 
     function handleSubmit(e){
-        e.target.value = ""
+        
         e.preventDefault()
 
         dispatch(getNamePokemon(name))
         setCurrentPage(1)
-        
+        e.target.value = ""
     }
 
 

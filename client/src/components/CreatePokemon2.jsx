@@ -49,13 +49,7 @@ const CreatePokemon2 = () => {
     const [errors, setErrors] = useState({})
 
 
-    const [form, setForm] = useState({
-        email: "",
-        name: "",
-        password: ""
-    })
-
-
+ 
     const [input, setInput] = useState({
         name: "",
         type: [],
@@ -131,16 +125,6 @@ const CreatePokemon2 = () => {
 
 
 
-    function handleSelect(e) {
-        if (input.type.length < 2) {
-            setInput({
-                ...input,
-                type: [...input.type, e.target.value]
-            })
-        } else {
-            alert("Solo puedes agregar 2 tipos")
-        }
-    }
 
     function handleDelete(e) {
         setInput({

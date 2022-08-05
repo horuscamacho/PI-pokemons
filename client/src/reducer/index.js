@@ -6,9 +6,8 @@ const initialState = {
     pokemonsCopy: [],
     pokemonsType: [],
     types: [],
-    pokedex: [],
     detail: [],
-    pokemonsSfilter: [] ///// ESTE ES PARA LOS DOBLES FILTRADOS
+    pokemonsSfilter: [] 
 }
 
 
@@ -34,11 +33,7 @@ function rootReducer (state=initialState, action) {
                 types: action.payload
             }
         
-        case TYPES.GET_USER:
-            return {
-                ...state,
-                usuario: action.payload
-            }
+        
 
         case TYPES.HANDLE_SORT:
             let sortedArray = action.payload === "-" ? state.pokemonsCopy : action.payload  === 'AZ' ? state.pokemons.sort(function(a, b){
@@ -115,19 +110,33 @@ function rootReducer (state=initialState, action) {
         
         
         case TYPES.GET_NAME_POKEMON:
+            console.log(action.payload)
             return {
                 ...state,
                 pokemons: action.payload,
-                pokemonsSfilter: action.payload,
-                pokemonsType: action.payload
             }
 
-        
+        case TYPES.SEARCH_LIVE:
+            const filtradoRapido = state.pokemonsCopy.filter(el => el.name.includes(action.payload))
+            console.log(filtradoRapido)
+            return {
+                ...state,
+                pokemons: filtradoRapido
+            }
 
+        case TYPES.RESET_FILTERS:
+            return {
+                ...state,
+                pokemons: state.pokemonsCopy
+            }
+
+
+            
         case TYPES.POST_POKEMON:
             return {
                 ...state,
             }
+        
             
 
             

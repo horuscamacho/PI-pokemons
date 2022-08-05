@@ -50,11 +50,7 @@ export default function PokemonsCreate() {
     const [errors, setErrors] = useState({})
 
 
-    const [form, setForm] = useState({
-        email: "",
-        name: "",
-        password: ""
-    })
+  
 
 
     const [input, setInput] = useState({
@@ -96,13 +92,13 @@ export default function PokemonsCreate() {
 
 
     function handleSubmit(e) {
-        if (input.name.length < 4 || input.name > 12 ||
-            input.life < 20 || input.life > 150 ||
-            input.attack < 30 || input.attack > 100 ||
-            input.defense < 60 || input.defense > 200 ||
-            input.velocity < 10 || input.velocity > 100 ||
-            input.height < 60 || input.height > 200 ||
-            input.weight < 10 || input.weight > 200 ||
+        if (input.name.length < 4 || input.name > 12 || typeof input.name !== "string" ||
+            input.life < 20 || input.life > 150 || typeof input.life !== "number" ||
+            input.attack < 30 || input.attack > 100 || typeof input.attack !== "number" ||
+            input.defense < 60 || input.defense > 200 || typeof input.defense !== "number" ||
+            input.velocity < 10 || input.velocity > 100 || typeof input.velocity !== "number" ||
+            input.height < 60 || input.height > 200 || typeof input.height !== "number" ||
+            input.weight < 10 || input.weight > 200 || typeof input.weight !== "number" ||
             input.type.length < 1) {
             alert("ALguno de los datos ingresados es incorrecto, revisa el formulario e inténtalo de nuevo")
         } else {
@@ -130,18 +126,6 @@ export default function PokemonsCreate() {
         dispatch(getTypes())
     }, [dispatch])
 
-
-
-    function handleSelect(e) {
-        if (input.type.length < 2) {
-            setInput({
-                ...input,
-                type: [...input.type, e.target.value]
-            })
-        } else {
-            alert("Solo puedes agregar 2 tipos")
-        }
-    }
 
     function handleDelete(e) {
         setInput({
@@ -273,8 +257,20 @@ export default function PokemonsCreate() {
                     </div>
                 ) : null}
                 {count === 9 ? (
-                    <input className="controls-create" placeholder="Imagen URL:" type="url" value={input.image} name="image" />
+                    <div>
+                        <label>Imágen</label>
+                        <input className='controls-create'
+                            type="text"
+                            name="image"
+                            onChange={(e) => updateInput(e)}
+                            value={input.image}
+                        />
+                        {errors.height && (
+                            <p className='errores'>{errors.height}</p>
+                        )}
+                    </div>
                 ) : null}
+                
 
                 <div>
                     <button className='booton' onClick={(e) => handleSubmit(e)} type='submit' >Enviar</button>

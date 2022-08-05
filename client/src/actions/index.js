@@ -23,11 +23,16 @@ export function getNamePokemon(name) {
 //##################   FUNCIÓN OBTENER TODOS LOS POKEMONS 
 export function getPokemons(){
     return async function(dispatch){
-        var json = await axios.get(urlServer);
-        return dispatch({
-            type: TYPES.GET_POKEMONS,
-            payload: json.data
-        })
+        try {
+            var json = await axios.get(urlServer);
+            return dispatch({
+                type: TYPES.GET_POKEMONS,
+                payload: json.data
+            }) 
+        } catch (error){
+            alert(error)
+        }
+        
     }
 }
 
@@ -120,5 +125,22 @@ export function postPokemon(payload){
         const json = await axios.post('http://localhost:3001/pokemons', payload)
         console.log(json)
         return json
+    }
+}
+
+
+export function searchLive(payload){
+    return {
+        type: TYPES.SEARCH_LIVE,
+        payload
+    }
+}
+
+
+
+export function resetFilters(payload){
+    return {
+        type: TYPES.RESET_FILTERS,
+        payload
     }
 }
